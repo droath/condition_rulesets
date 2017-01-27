@@ -1,0 +1,88 @@
+entity.condition_rulesets.collection:
+  path: '/admin/config/system/condition_rulesets'
+  defaults:
+    _title: 'Condition rulesets'
+    _entity_list: 'condition_rulesets'
+  requirements:
+    _permission: 'administer condition rulesets'
+
+entity.condition_rulesets.add_form:
+  path: '/admin/config/system/condition_rulesets/add'
+  defaults:
+    _title: 'Add rulesets'
+    _entity_wizard: 'condition_rulesets.add'
+    tempstore_id: 'condition_rulesets.wizard_form'
+  requirements:
+    _permission: 'administer condition rulesets'
+
+entity.condition_rulesets.add_step_form:
+  path: '/admin/config/system/condition_rulesets/add/{machine_name}/{step}'
+  defaults:
+    _title: 'Add rulesets'
+    _entity_wizard: 'condition_rulesets.add'
+    tempstore_id: 'condition_rulesets.wizard_form'
+  requirements:
+    _permission: 'administer condition rulesets'
+
+entity.condition_rulesets.edit_form:
+  path: '/admin/config/system/condition_rulesets/{machine_name}/{step}'
+  defaults:
+    _title: 'Edit rulesets'
+    _entity_wizard: 'condition_rulesets.edit'
+    tempstore_id: 'condition_rulesets.wizard_form'
+  requirements:
+    _permission: 'administer condition rulesets'
+    step: ^(context|relationship|general|condition)$
+
+entity.condition_rulesets.relationship.subform_add:
+  path: '/admin/config/system/condition_rulesets/{machine_name}/relationship/add'
+  defaults:
+    _title: 'Add relationship'
+    _form: \Drupal\condition_rulesets\Form\ConditionRulesetsRelationshipAdd
+    step: relationship
+  requirements:
+    _permission: 'administer condition rulesets'
+
+entity.condition_rulesets.relationship.subform_remove:
+  path: '/admin/config/system/condition_rulesets/{machine_name}/relationship/remove/{id}'
+  defaults:
+    _title: 'Remove relationship'
+    _form: \Drupal\condition_rulesets\Form\ConditionRulesetsRelationshipRemove
+    step: relationship
+  requirements:
+    _permission: 'administer condition rulesets'
+
+entity.condition_rulesets.condition.subform_add:
+  path: '/admin/config/system/condition_rulesets/{machine_name}/condition/add'
+  defaults:
+    _title: 'Add condition'
+    _form: \Drupal\condition_rulesets\Form\ConditionRulesetsConditionAdd
+    step: condition
+  requirements:
+    _permission: 'administer condition rulesets'
+
+entity.condition_rulesets.condition.subform_edit:
+  path: '/admin/config/system/condition_rulesets/{machine_name}/condition/edit/{id}'
+  defaults:
+    _title: 'Edit condition'
+    _form: \Drupal\condition_rulesets\Form\ConditionRulesetsConditionEdit
+    step: condition
+  requirements:
+    _permission: 'administer condition rulesets'
+
+entity.condition_rulesets.condition.subform_remove:
+  path: '/admin/config/system/condition_rulesets/{machine_name}/condition/remove/{id}'
+  defaults:
+    _title: 'Remove condition'
+    _form: \Drupal\condition_rulesets\Form\ConditionRulesetsConditionRemove
+    step: condition
+  requirements:
+    _permission: 'administer condition rulesets'
+
+entity.condition_rulesets.delete_form:
+  path: '/admin/config/system/condition_rulesets/{condition_rulesets}/delete'
+  defaults:
+    _title: 'Delete condition rulesets'
+    _entity_form: 'condition_rulesets.delete'
+  requirements:
+    _permission: 'administer condition rulesets'

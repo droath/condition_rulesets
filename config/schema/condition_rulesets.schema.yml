@@ -1,0 +1,66 @@
+condition_rulesets.*:
+  type: config_entity
+  label: 'Condition rulesets'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: string
+      label: 'Label'
+    required_context:
+      type: string
+      label: 'Rulesets required context'
+    relationships:
+      type: sequence
+      label: 'Rulesets relationships'
+      sequence:
+        type: mapping
+        label: 'Rulesets relationship items'
+        mapping:
+          id:
+            type: string
+            label: 'Relationship items id'
+          name:
+            type: string
+            label: 'Relationship items name'
+          context:
+            type: string
+            label: 'Relationship items context'
+    conditions:
+      type: sequence
+      label: 'Rulesets conditions'
+      sequence:
+        type: mapping
+        label: 'Rulesets condition items'
+        mapping:
+          id:
+            type: string
+            label: 'Condition item id'
+          name:
+            type: string
+            label: 'Condition item name'
+          context:
+            type: string
+            label: 'Condition context data type'
+          field_name:
+            type: string
+            label: 'Condition field name'
+          settings:
+            type: mapping
+            label: 'Condition widget'
+            mapping:
+              widget:
+                type: sequence
+                label: 'Condition settings widget'
+                sequence:
+                  type: mapping
+                  label: 'Condition settings widget values.'
+                  mapping:
+                    value:
+                      type: string
+                      label: 'Condition widget value'
+    evaluation_rule:
+      type: string
+      label: 'Rulesets condition evaluation rule'
+

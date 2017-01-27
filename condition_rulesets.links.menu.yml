@@ -1,0 +1,5 @@
+condition_rulesets.collection:
+  title: 'Condition rulesets'
+  description: 'Manage available condition rulesets.'
+  parent: system.admin_config_system
+  route_name: entity.condition_rulesets.collection

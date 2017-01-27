@@ -1,0 +1,7 @@
+type: module
+name: Condition rulesets
+description: Create and manage differnt condition rulesets.
+core: 8.x
+package: Other
+dependencies:
+  - ctools

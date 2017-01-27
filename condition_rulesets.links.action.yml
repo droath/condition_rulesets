@@ -1,0 +1,5 @@
+condition_rulesets.add:
+  route_name: entity.condition_rulesets.add_form
+  title: 'Add conditional rulesets'
+  appears_on:
+    - entity.condition_rulesets.collection
